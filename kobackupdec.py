@@ -560,8 +560,6 @@ def main(password, backup_path_in, dest_path_out):
         unk_files.remove(entry)
 
     all_dest_files = dest_path_out.glob('**/*')
-    for entry in all_dest_files:
-        os.chmod(entry, 0o444)
 
     for entry in apk_files:
         logging.warning('APK file not handled: %s', entry.name)
